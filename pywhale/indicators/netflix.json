@@ -1,0 +1,33 @@
+{
+  "name": "Netflix",
+  "hosts": ["netflix.com"],
+  "names": ["netflix"],
+  "indicators": [
+    {
+      "type": "Fake link",
+      "target": "link",
+      "match_condition": "and",
+      "indicator": "danger",
+      "matches": [
+        {
+          "type": "contains",
+          "match": "netflix",
+          "options": ["not_hosts", "lowercase"]
+        }
+      ]
+    },
+    {
+      "type": "Fake sender",
+      "target": "body",
+      "indicator": "danger",
+      "match_condition": "and",
+      "matches": [
+        {
+          "type": "contains",
+          "match": "netflix",
+          "options": ["not_from", "lowercase"]
+        }
+      ]
+    }
+  ]
+}

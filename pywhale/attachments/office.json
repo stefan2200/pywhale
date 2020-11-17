@@ -1,0 +1,9 @@
+{
+  "file_type": ["docx", "xlsx", "xls", "doc"],
+  "decoder": "zip",
+  "name": "Office attachment (zipped)",
+  "indicators": [
+    {"type": "contains_any","needles": ["CreateThread", "VirtualAlloc", "RtlMoveMemory"], "output": "contains malicious VBCode", "indicator": "danger"}
+  ]
+
+}

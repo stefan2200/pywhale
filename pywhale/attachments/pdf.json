@@ -1,0 +1,10 @@
+{
+  "file_type": "pdf",
+  "name": "PDF attachment",
+  "decoder": null,
+  "indicators": [
+    {"type": "contains", "needles":  "/JavaScript", "output": "PDF contains interactive JavaScript", "indicator": "danger"},
+    {"type": "contains", "needles":  "/F \\\\", "output": "PDF contains network path (possible NTLM Stealing)", "indicator": "danger"}
+  ]
+
+}

@@ -1,0 +1,33 @@
+{
+  "name": "PayPal",
+  "hosts": ["paypal.com"],
+  "names": ["paypal"],
+  "indicators": [
+    {
+      "type": "Fake link",
+      "target": "link",
+      "match_condition": "and",
+      "indicator": "danger",
+      "matches": [
+        {
+          "type": "contains",
+          "match": "paypal",
+          "options": ["not_hosts", "lowercase"]
+        }
+      ]
+    },
+    {
+      "type": "Fake sender",
+      "target": "body",
+      "indicator": "danger",
+      "match_condition": "and",
+      "matches": [
+        {
+          "type": "contains",
+          "match": "paypal",
+          "options": ["not_from", "lowercase"]
+        }
+      ]
+    }
+  ]
+}

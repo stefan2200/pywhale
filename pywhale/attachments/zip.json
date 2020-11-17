@@ -1,0 +1,13 @@
+{
+  "file_type": "zip",
+  "name": "ZIP attachment",
+  "decoder": "zip",
+  "indicators": [
+
+  ],
+  "files": [
+    {"type": "contains_any", "needles": [".exe", ".msi", ".vbs", ".js", ".jar", ".bat", ".cmd", ".sh", ".ps1", ".wsf"], "indicator":  "danger", "output": "Contains executable"},
+    {"type": "contains_any", "needles": ["../../", "..\\..\\"], "indicator":  "danger", "output": "Contains path traversal attack"}
+  ]
+
+}
